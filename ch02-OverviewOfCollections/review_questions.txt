@@ -1,0 +1,11 @@
+Review Questions
+1. B - Lists and stacks
+2. B - Sets and dictionaries
+3. B - File directory system
+4. B - Map of flight paths between cities
+5. A
+6. A 
+7. B
+8. A
+9. B
+10. A
