@@ -1,40 +1,18 @@
-# def fib(n):
-#     if n == 1 or n == 2: return 1
-#     else: return fib(n - 1) + fib(n - 2)
+class SavingsAccount(object):
+    """This class represents a savings account with the owner's name, pin and balance."""
+    
+    def __init__(self, name, pin, balance = 0.0):
+        self.name = name
+        self.pin = pin
+        self.balance = balance
+    
+    def __lt__(self, other):
+        return self.name < other.name
+    
+    # Other methods, including __eq__
+s1 = SavingsAccount('Ken', '1000', 0)
+s2 = SavingsAccount('Bill', '1001', 30)
 
-# for n in range(1, 33):
-#     print(f'{n}: {fib(n)}')
+print(s1 < s2, end='\n')
+print(s1 > s2, end='\n')
 
-
-
-
-def countdown(i):
-    print(i)
-    if i == 0: return # Base case
-    else:
-        countdown(i - 1) # Recursive case
-
-countdown(10)
-
-
-def greet2(name):
-    print(f'How are you, {name}?')
-
-def bye():
-    print('Ok bye!')
-
-
-def greet(name):
-    print(f'Hello, {name}')
-    greet2(name) # greet is put on hold while greet2 is put on the call stack and executed
-    print('Getting ready to say bye...')
-    bye() # greet is now put on hold by the bye function which is put on the call stack and executed then greet can finish it's execution finally
-
-greet('Dean')
-
-def fact(n):
-    if n == 1: return 1 # Base case
-    else:
-        return n * fact(n - 1) # Recursive case
-
-print(fact(3)) 
